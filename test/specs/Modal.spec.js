@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import $ from 'jquery'
 import Modal from '@src/components/modal/Modal.vue'
-import ModalDoc from '@docs/pages/components/Modal.md'
+import ModalDoc from '@docs/pages/en-US/components/Modal.md'
 import utils from '../utils'
 
 describe('Modal', () => {

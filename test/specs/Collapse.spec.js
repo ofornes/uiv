@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import $ from 'jquery'
-import CollapseDoc from '@docs/pages/components/Collapse.md'
+import CollapseDoc from '@docs/pages/en-US/components/Collapse.md'
 import utils from '../utils'
 
 describe('Collapse', () => {

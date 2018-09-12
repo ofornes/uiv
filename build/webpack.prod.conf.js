@@ -11,13 +11,14 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
 const SitemapPlugin = require('sitemap-webpack-plugin').default
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const _ = require('lodash')
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
 
-let staticPaths = utils.getDocumentRoutes()
-let processProgress = 0
+const staticPaths = utils.getDocumentRoutes()
+const staticPathsChunks = _.chunk(staticPaths, 10)
 
 let webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -122,21 +123,23 @@ let webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-    new PrerenderSpaPlugin(
-      // (REQUIRED) Absolute path to static root
-      path.join(__dirname, './../dist-docs'),
-      // (REQUIRED) List of routes to prerender
-      staticPaths,
-      {
-        maxAttempts: 5,
-        navigationLocked: true,
-        captureAfterTime: 1000,
-        postProcessHtml: function (context) {
-          console.log(`[PRE-RENDER] (${++processProgress} / ${staticPaths.length}) ${context.route}`)
-          return context.html
+    ...staticPathsChunks.map(chunk => {
+      return new PrerenderSpaPlugin(
+        // (REQUIRED) Absolute path to static root
+        path.join(__dirname, './../dist-docs'),
+        // (REQUIRED) List of routes to prerender
+        chunk,
+        {
+          maxAttempts: 5,
+          navigationLocked: true,
+          captureAfterTime: 1000,
+          postProcessHtml: function (context) {
+            console.log(`[PRE-RENDER] ${context.route}`)
+            return context.html
+          }
         }
-      }
-    ),
+      )
+    }),
     new SitemapPlugin(
       'https://uiv.wxsm.space',
       staticPaths.map(path => path === '/' ? path : path + '/'),

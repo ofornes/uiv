@@ -2,7 +2,7 @@ import Vue from 'vue'
 import $ from 'jquery'
 import Tabs from '@src/components/tabs/Tabs.vue'
 import Tab from '@src/components/tabs/Tab.vue'
-import TabsDoc from '@docs/pages/components/Tabs.md'
+import TabsDoc from '@docs/pages/en-US/components/Tabs.md'
 import utils from '../utils'
 
 describe('Tabs', () => {

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import $ from 'jquery'
-import PaginationDoc from '@docs/pages/components/Pagination.md'
+import PaginationDoc from '@docs/pages/en-US/components/Pagination.md'
 import utils from '../utils'
 
 describe('Pagination', () => {

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import $ from 'jquery'
 import Alert from '@src/components/alert/Alert.vue'
-import AlertDoc from '@docs/pages/components/Alert.md'
+import AlertDoc from '@docs/pages/en-US/components/Alert.md'
 import utils from '../utils'
 
 const DEFAULT_ALERT_CLASS = 'alert-info'

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import $ from 'jquery'
 import MessageBox from '@src/services/messagebox/messageBox'
-import MessageBoxDoc from '@docs/pages/components/MessageBox.md'
+import MessageBoxDoc from '@docs/pages/en-US/components/MessageBox.md'
 import utils from '../utils'
 
 describe('MessageBox', () => {

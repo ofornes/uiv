@@ -9,6 +9,14 @@
       <a href="https://www.npmjs.com/package/uiv">
         <img src="https://img.shields.io/npm/v/uiv.svg" alt="NPM Version" height="20px">
       </a>
+      <form class="form-inline form-lang" @submit.prevent>
+        <div class="form-group">
+          <select class="form-control input-sm" v-model="lang" @change="onLangChange">
+            <option value="en-US">English</option>
+            <option value="zh-CN">简体中文</option>
+          </select>
+        </div>
+      </form>
     </div>
     <div class="nav-container">
       <div class="nav-div">
@@ -61,19 +69,25 @@
     components: {Logo},
     props: ['isAsideShow'],
     data () {
-      const components = routes.filter(v => v.meta && v.meta.type === 'component')
-      const groups = uniq(components.map(v => v.meta.group))
-        .map(v => {
-          return {
-            name: v,
-            isGroup: true,
-            items: components.filter(_v => _v.meta && _v.meta.group === v)
-          }
-        })
       return {
-        asideItems: [
+        lang: 'en-US',
+        supportedLangs: uniq(routes.map(v => v.meta && v.meta.lang).filter(v => !!v))
+      }
+    },
+    computed: {
+      asideItems () {
+        const components = routes.filter(v => v.meta && v.meta.type === 'component' && v.meta.lang === this.lang)
+        const groups = uniq(components.map(v => v.meta.group))
+          .map(v => {
+            return {
+              name: v,
+              isGroup: true,
+              items: components.filter(_v => _v.meta && _v.meta.group === v)
+            }
+          })
+        return [
           {label: 'Changelog', href: 'https://github.com/wxsms/uiv/releases'},
-          {label: 'Usage', items: routes.filter(v => v.meta && v.meta.type === 'usage')},
+          {label: 'Usage', items: routes.filter(v => v.meta && v.meta.type === 'usage' && v.meta.lang === this.lang)},
           {label: 'Components', items: groups}
         ]
       }
@@ -81,6 +95,21 @@
     methods: {
       toggleAside (show) {
         bus.$emit(events.TOGGLE_ASIDE, show)
+      },
+      onLangChange () {
+        const oriPath = this.$route.path.split('/').pop()
+        const newPath = this.lang === 'en-US' ? `/${oriPath}` : `${this.lang}/${oriPath}`
+        this.$router.push(newPath)
+      }
+    },
+    mounted () {
+      try {
+        const lang = window.location.pathname.split('/')[1]
+        if (this.supportedLangs.indexOf(lang) >= 0) {
+          this.lang = lang
+        }
+      } catch (e) {
+        console.error(e)
       }
     }
   }
@@ -88,6 +117,10 @@
 
 <style lang="less" rel="stylesheet/less" scoped>
   @import "../../assets/css/variables";
+
+  .form-lang {
+    margin-top: 20px
+  }
 
   aside {
     position: fixed;

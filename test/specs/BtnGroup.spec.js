@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import $ from 'jquery'
-import BtnGroup from '@docs/pages/components/BtnGroup.md'
+import BtnGroup from '@docs/pages/en-US/components/BtnGroup.md'
 
 describe('BtnGroup', () => {
   let vm

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import DatePicker from '@src/components/datepicker/DatePicker.vue'
-import DatePickerDoc from '@docs/pages/components/DatePicker.md'
+import DatePickerDoc from '@docs/pages/en-US/components/DatePicker.md'
 import localeHU from '@src/locale/lang/hu-HU'
 import $ from 'jquery'
 import utils from '../utils'

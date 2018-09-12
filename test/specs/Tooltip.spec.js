@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import $ from 'jquery'
 import Tooltip from '@src/components/tooltip/Tooltip.vue'
-import TooltipDoc from '@docs/pages/components/Tooltip.md'
+import TooltipDoc from '@docs/pages/en-US/components/Tooltip.md'
 import utils from '../utils'
 
 describe('Tooltip', () => {

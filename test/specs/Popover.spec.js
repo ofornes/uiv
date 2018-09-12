@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import $ from 'jquery'
 import Popover from '@src/components/popover/Popover.vue'
-import PopoverDoc from '@docs/pages/components/Popover.md'
+import PopoverDoc from '@docs/pages/en-US/components/Popover.md'
 import utils from '../utils'
 
 describe('Popover', () => {

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import $ from 'jquery'
-import NavbarDoc from '@docs/pages/components/Navbar.md'
+import NavbarDoc from '@docs/pages/en-US/components/Navbar.md'
 import utils from '../utils'
 
 describe('Navbar', () => {

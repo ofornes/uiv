@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import $ from 'jquery'
 import Notification from '@src/services/notification/notification'
-import NotificationDoc from '@docs/pages/components/Notification.md'
+import NotificationDoc from '@docs/pages/en-US/components/Notification.md'
 import utils from '../utils'
 
 const OFFSET = '15px'

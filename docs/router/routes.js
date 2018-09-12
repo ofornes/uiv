@@ -1,4 +1,5 @@
-// DO NOT ADD ANYTHING ELSE EXCEPT ROUTE ITEM INTO THIS FILE
+import zhCN from './routes-zh-CN'
+
 // routes order = menu order
 const routes = [
   {
@@ -14,239 +15,264 @@ const routes = [
     meta: {
       type: 'usage',
       label: 'Getting Started',
-      url: 'usage/GettingStarted.md'
+      url: 'en-US/usage/GettingStarted.md',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/usage/GettingStarted.md')
+    component: () => import('../pages/en-US/usage/GettingStarted.md')
   },
   {
     path: '/i18n',
     meta: {
       type: 'usage',
       label: 'I18n',
-      url: 'usage/I18n.md'
+      url: 'en-US/usage/I18n.md',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/usage/I18n.md')
+    component: () => import('../pages/en-US/usage/I18n.md')
   },
   {
     path: '/button',
     meta: {
       type: 'component',
       label: 'Button',
-      url: 'components/Btn.md',
-      group: 'Basic'
+      url: 'en-US/components/Btn.md',
+      group: 'Basic',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Btn.md')
+    component: () => import('../pages/en-US/components/Btn.md')
   },
   {
     path: '/button-group',
     meta: {
       type: 'component',
       label: 'ButtonGroup',
-      url: 'components/BtnGroup.md',
-      group: 'Basic'
+      url: 'en-US/components/BtnGroup.md',
+      group: 'Basic',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/BtnGroup.md')
+    component: () => import('../pages/en-US/components/BtnGroup.md')
   },
   {
     path: '/collapse',
     meta: {
       type: 'component',
       label: 'Collapse',
-      url: 'components/Collapse.md',
-      group: 'Basic'
+      url: 'en-US/components/Collapse.md',
+      group: 'Basic',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Collapse.md')
+    component: () => import('../pages/en-US/components/Collapse.md')
   },
   {
     path: '/dropdown',
     meta: {
       type: 'component',
       label: 'Dropdown',
-      url: 'components/Dropdown.md',
-      group: 'Popup'
+      url: 'en-US/components/Dropdown.md',
+      group: 'Popup',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Dropdown.md')
+    component: () => import('../pages/en-US/components/Dropdown.md')
   },
   {
     path: '/modal',
     meta: {
       type: 'component',
       label: 'Modal',
-      url: 'components/Modal.md',
-      group: 'Popup'
+      url: 'en-US/components/Modal.md',
+      group: 'Popup',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Modal.md')
+    component: () => import('../pages/en-US/components/Modal.md')
   },
   {
     path: '/tooltip',
     meta: {
       type: 'component',
       label: 'Tooltip',
-      url: 'components/Tooltip.md',
-      group: 'Popup'
+      url: 'en-US/components/Tooltip.md',
+      group: 'Popup',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Tooltip.md')
+    component: () => import('../pages/en-US/components/Tooltip.md')
   },
   {
     path: '/popover',
     meta: {
       type: 'component',
       label: 'Popover',
-      url: 'components/Popover.md',
-      group: 'Popup'
+      url: 'en-US/components/Popover.md',
+      group: 'Popup',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Popover.md')
+    component: () => import('../pages/en-US/components/Popover.md')
   },
   {
     path: '/multi-select',
     meta: {
       type: 'component',
       label: 'MultiSelect',
-      url: 'components/MultiSelect.md',
-      group: 'Form'
+      url: 'en-US/components/MultiSelect.md',
+      group: 'Form',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/MultiSelect.md')
+    component: () => import('../pages/en-US/components/MultiSelect.md')
   },
   {
     path: '/typeahead',
     meta: {
       type: 'component',
       label: 'Typeahead',
-      url: 'components/Typeahead.md',
-      group: 'Form'
+      url: 'en-US/components/Typeahead.md',
+      group: 'Form',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Typeahead.md')
+    component: () => import('../pages/en-US/components/Typeahead.md')
   },
   {
     path: '/date-picker',
     meta: {
       type: 'component',
       label: 'DatePicker',
-      url: 'components/DatePicker.md',
-      group: 'Form'
+      url: 'en-US/components/DatePicker.md',
+      group: 'Form',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/DatePicker.md')
+    component: () => import('../pages/en-US/components/DatePicker.md')
   },
   {
     path: '/time-picker',
     meta: {
       type: 'component',
       label: 'TimePicker',
-      url: 'components/TimePicker.md',
-      group: 'Form'
+      url: 'en-US/components/TimePicker.md',
+      group: 'Form',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/TimePicker.md')
+    component: () => import('../pages/en-US/components/TimePicker.md')
   },
   {
     path: '/alert',
     meta: {
       type: 'component',
       label: 'Alert',
-      url: 'components/Alert.md',
-      group: 'Notice'
+      url: 'en-US/components/Alert.md',
+      group: 'Notice',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Alert.md')
+    component: () => import('../pages/en-US/components/Alert.md')
   },
   {
     path: '/notification',
     meta: {
       type: 'component',
       label: 'Notification',
-      url: 'components/Notification.md',
-      group: 'Notice'
+      url: 'en-US/components/Notification.md',
+      group: 'Notice',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Notification.md')
+    component: () => import('../pages/en-US/components/Notification.md')
   },
   {
     path: '/message-box',
     meta: {
       type: 'component',
       label: 'MessageBox',
-      url: 'components/MessageBox.md',
-      group: 'Notice'
+      url: 'en-US/components/MessageBox.md',
+      group: 'Notice',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/MessageBox.md')
+    component: () => import('../pages/en-US/components/MessageBox.md')
   },
   {
     path: '/navbar',
     meta: {
       type: 'component',
       label: 'Navbar',
-      url: 'components/Navbar.md',
-      group: 'Navigation'
+      url: 'en-US/components/Navbar.md',
+      group: 'Navigation',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Navbar.md')
+    component: () => import('../pages/en-US/components/Navbar.md')
   },
   {
     path: '/tabs',
     meta: {
       type: 'component',
       label: 'Tabs',
-      url: 'components/Tabs.md',
-      group: 'Navigation'
+      url: 'en-US/components/Tabs.md',
+      group: 'Navigation',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Tabs.md')
+    component: () => import('../pages/en-US/components/Tabs.md')
   },
   {
     path: '/breadcrumbs',
     meta: {
       type: 'component',
       label: 'Breadcrumbs',
-      url: 'components/Breadcrumbs.md',
-      group: 'Navigation'
+      url: 'en-US/components/Breadcrumbs.md',
+      group: 'Navigation',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Breadcrumbs.md')
+    component: () => import('../pages/en-US/components/Breadcrumbs.md')
   },
   {
     path: '/pagination',
     meta: {
       type: 'component',
       label: 'Pagination',
-      url: 'components/Pagination.md',
-      group: 'Indicator'
+      url: 'en-US/components/Pagination.md',
+      group: 'Indicator',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Pagination.md')
+    component: () => import('../pages/en-US/components/Pagination.md')
   },
   {
     path: '/progress-bar',
     meta: {
       type: 'component',
       label: 'ProgressBar',
-      url: 'components/ProgressBar.md',
-      group: 'Indicator'
+      url: 'en-US/components/ProgressBar.md',
+      group: 'Indicator',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/ProgressBar.md')
+    component: () => import('../pages/en-US/components/ProgressBar.md')
   },
   {
     path: '/carousel',
     meta: {
       type: 'component',
       label: 'Carousel',
-      url: 'components/Carousel.md',
-      group: 'Others'
+      url: 'en-US/components/Carousel.md',
+      group: 'Others',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Carousel.md')
+    component: () => import('../pages/en-US/components/Carousel.md')
   },
   {
     path: '/affix',
     meta: {
       type: 'component',
       label: 'Affix',
-      url: 'components/Affix.md',
-      group: 'Others'
+      url: 'en-US/components/Affix.md',
+      group: 'Others',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/Affix.md')
+    component: () => import('../pages/en-US/components/Affix.md')
   },
   {
     path: '/scroll-spy',
     meta: {
       type: 'component',
       label: 'ScrollSpy',
-      url: 'components/ScrollSpy.md',
-      group: 'Others'
+      url: 'en-US/components/ScrollSpy.md',
+      group: 'Others',
+      lang: 'en-US'
     },
-    component: () => import('./../pages/components/ScrollSpy.md')
-  }
+    component: () => import('../pages/en-US/components/ScrollSpy.md')
+  },
+  ...zhCN
 ]
 
 export default routes

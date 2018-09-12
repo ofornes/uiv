@@ -40,10 +40,6 @@
       let headings = element.querySelectorAll(`h1,h2`)
       for (let i = 0; i < headings.length; i++) {
         let h = headings[i]
-        // Filter those have no id present
-        if (!h.id) {
-          continue
-        }
         let t = {
           level: parseInt(h.tagName.substr(1, 1)),
           href: `#${h.id}`,

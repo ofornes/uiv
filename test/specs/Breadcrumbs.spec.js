@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import $ from 'jquery'
-import BreadcrumbsDoc from '@docs/pages/components/Breadcrumbs.md'
+import BreadcrumbsDoc from '@docs/pages/en-US/components/Breadcrumbs.md'
 
 describe('Breadcrumbs', () => {
   let vm

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import $ from 'jquery'
 import utils from '../utils'
-import BtnDoc from '@docs/pages/components/Btn.md'
+import BtnDoc from '@docs/pages/en-US/components/Btn.md'
 import Btn from '@src/components/button/Btn'
 
 describe('Btn', () => {

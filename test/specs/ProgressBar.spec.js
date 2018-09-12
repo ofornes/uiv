@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import $ from 'jquery'
-import ProgressBarDoc from '@docs/pages/components/ProgressBar.md'
+import ProgressBarDoc from '@docs/pages/en-US/components/ProgressBar.md'
 
 describe('ProgressBar', () => {
   let vm

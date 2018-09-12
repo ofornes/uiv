@@ -74,11 +74,38 @@ exports.styleLoaders = function (options) {
 
 // Get routes array from /docs/router/routes.js
 exports.getDocumentRoutes = () => {
-  let routesCode = babel.transformFileSync(path.join(__dirname, '../docs/router/routes.js')).code
-  routesCode = routesCode
-    .replace(/import\('[\S\s].*?'\)/ig, 'null')
-    .replace(/export default[\S\s].*?;/, '')
-  var routes = []
-  eval(routesCode)
-  return routes.map(v => v.path)
+  const pathsWithoutI18n = ['/']
+  const pathsWithI18n = [
+    '/getting-started',
+    '/i18n',
+    '/button',
+    '/button-group',
+    '/collapse',
+    '/dropdown',
+    '/modal',
+    '/tooltip',
+    '/popover',
+    '/multi-select',
+    '/typeahead',
+    '/date-picker',
+    '/time-picker',
+    '/alert',
+    '/notification',
+    '/message-box',
+    '/navbar',
+    '/tabs',
+    '/breadcrumbs',
+    '/pagination',
+    '/progress-bar',
+    '/carousel',
+    '/affix',
+    '/scroll-spy'
+  ]
+  const supportedLangs = ['zh-CN']
+  let allPath = [...pathsWithoutI18n, ...pathsWithI18n]
+  supportedLangs.forEach(lang => {
+    allPath = [...allPath, ...pathsWithI18n.map(path => `/${lang}${path}`)]
+  })
+  // console.log(allPath)
+  return allPath
 }

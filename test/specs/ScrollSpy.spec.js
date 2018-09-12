@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import $ from 'jquery'
-import ScrollSpyDoc from '@docs/pages/components/ScrollSpy.md'
+import ScrollSpyDoc from '@docs/pages/en-US/components/ScrollSpy.md'
 import utils from '../utils'
 
 const expectActive = ($nav, hash) => {

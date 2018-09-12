@@ -2,7 +2,7 @@ import Vue from 'vue'
 import $ from 'jquery'
 import Carousel from '@src/components/carousel/Carousel.vue'
 import Slide from '@src/components/carousel/Slide.vue'
-import CarouselDoc from '@docs/pages/components/Carousel.md'
+import CarouselDoc from '@docs/pages/en-US/components/Carousel.md'
 import utils from '../utils'
 
 describe('Carousel', () => {
